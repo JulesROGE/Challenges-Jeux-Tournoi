@@ -8,27 +8,49 @@ export default function Roue() {
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const data = [
-    { option: "€5 Free bet" },
-    { option: "50 Points" },
-    { option: "Try again" },
-    { option: "€1 Free bet" },
-    { option: "20 points" },
-    { option: "100 points" },
-    { option: "€20 Free bet" },
-    { option: "50 points" },
-    { option: "20 points" }
+    { option: "100" },
+    { option: "5" },
+    { option: "90" },
+    { option: "25" },
+    { option: "70" },
+    { option: "45" },
+    { option: "10" },
+    { option: "65" },
+    { option: "30" },
+    { option: "85" },
+    { option: "55" },
+    { option: "95" },
+    { option: "50" },
+    { option: "75" },
+    { option: "40" },
+    { option: "20" },
+    { option: "60" },
+    { option: "35" },
+    { option: "80" },
+    { option: "15" },
   ];
 
   const bgs = [
+    "#FF0000",
     "#4166E9",
-    "#27B1DD",
-    "#DD5570",
-    "#028C84",
-    "#1DC25F",
-    "#C96014",
-    "#E3C216",
-    "#BB83F4",
-    "#6A32CB"
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#A6A6A6",
+    "#4166E9"
   ];
 
   const handleSpinClick = () => {
