@@ -1,0 +1,51 @@
+.timeline
+  display: flex
+  justify-content: center
+  text-align: center
+  h4
+    margin: 0
+  .container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  // padding: 20px
+  // background-color: #f0f0f0
+
+  .timeline-section
+    // flex: 1
+    // padding: 10px
+    width: 15vw
+    text-align: center
+    background-color: #e0e0e0
+    border-radius: 5%
+    // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) //start
+    // clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%) //middle
+    // clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%) //end
+
+    &:not(:last-child)
+      margin-right: 10px
+
+    &.highlighted
+      background-color: #ccc
+
+    h2
+      margin-bottom: 10px
+      font-size: 18px
+      font-weight: bold
+
+    p
+      font-size: 16px
+
+.timeline-start
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) //start
+
+.timeline-middle
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%) //middle
+
+.timeline-end
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%) //end
+
+.empty-section
+  background-color: red
