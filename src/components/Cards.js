@@ -1,3 +1,4 @@
+import "./Card.sass";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -8,7 +9,7 @@ import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
-import Roue from "./Roue";
+import Valorant from "./Valorant";
 
 const style = {
   position: "absolute",
@@ -28,23 +29,23 @@ export default function ActionAreaCard() {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345 }} className="Card">
         <CardActionArea>
           <CardMedia
             onClick={handleOpen}
             component="img"
             height="140"
-            image="https://pbs.twimg.com/profile_banners/1454202151769681920/1645952858/1500x500"
+            image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
             alt="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+            Valorant
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            {/* <Typography variant="body2" color="text.secondary">
               Lizards are a widespread group of squamate reptiles, with over
               6,000 species, ranging across all continents except Antarctica
-            </Typography>
+            </Typography> */}
           </CardContent>
         </CardActionArea>
       </Card>
@@ -55,7 +56,9 @@ export default function ActionAreaCard() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Roue />
+          <h1 className="titre">Challenge Valorant</h1>
+
+          <Valorant />
 
           {/* <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal

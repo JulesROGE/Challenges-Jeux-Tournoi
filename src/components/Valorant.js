@@ -8,49 +8,22 @@ export default function Roue() {
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const data = [
-    { option: "100" },
-    { option: "5" },
-    { option: "90" },
-    { option: "25" },
-    { option: "70" },
-    { option: "45" },
-    { option: "10" },
-    { option: "65" },
-    { option: "30" },
-    { option: "85" },
-    { option: "55" },
-    { option: "95" },
-    { option: "50" },
-    { option: "75" },
-    { option: "40" },
-    { option: "20" },
-    { option: "60" },
-    { option: "35" },
-    { option: "80" },
-    { option: "15" },
+    { option: "Doigts liés entre eux", style: { fontSize: 15} },
+    { option: "Absence de son", style: { fontSize: 15} },
+    { option: "Défi de concentration", style: { fontSize: 15} },
+    { option: "Réticule visée désactivée", style: { fontSize: 14} },
+    { option: "Champ de vision réduit", style: { fontSize: 15} },
+    { option: "Aucun challenge", style: { fontSize: 15} },
   ];
+  
+  
 
   const bgs = [
-    "#FF0000",
-    "#4166E9",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#A6A6A6",
-    "#4166E9",
+    "#79AFEB",
+    "#F5C75D",
+    "#2B619D",
+    "#FFE29E",
+
   ];
 
   const handleSpinClick = () => {
@@ -59,8 +32,9 @@ export default function Roue() {
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
   };
+  // style={{ transform: "scale(1.5)"}}
   return (
-    <div className="App">
+    <div className="App" > 
       <div style={{ transform: "rotate(45deg)" }}>
         <Wheel
           mustStartSpinning={mustSpin}
@@ -70,15 +44,17 @@ export default function Roue() {
           outerBorderColor="black"
           pointerProps={
             {
-              // src: "https://m3tkbw.csb.app/blazzio-sign.png",
-              // style: { transform: "rotate(-100deg)" }
             }
           }
-          textColors={["white"]}
+          textSize="10px"
+          textColors={["black"]}
           backgroundColors={bgs}
           onStopSpinning={() => {
             setMustSpin(false);
           }}
+          interface="canvas"
+
+
         />
       </div>
       <Button
