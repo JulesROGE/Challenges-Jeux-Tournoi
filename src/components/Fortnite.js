@@ -34,7 +34,7 @@ export default function Roue() {
   };
   // style={{ transform: "scale(1.5)"}}
   return (
-    <div className="App" > 
+    <div className="Roue" > 
       <div style={{ transform: "rotate(45deg)" }}>
         <Wheel
           mustStartSpinning={mustSpin}
