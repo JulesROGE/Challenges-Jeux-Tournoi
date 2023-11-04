@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App" id="IDP1">
       <h1 className="titre">Roux</h1>
-      <Valorant />
-      <Roue />
+      {/* <Valorant /> */}
+      {/* <Roue /> */}
 
       <h1 className="titre">Cards</h1>
 

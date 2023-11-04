@@ -11,9 +11,9 @@ export default function Roue() {
     { option: "Doigts liés entre eux", style: { fontSize: 15} },
     { option: "Absence de son", style: { fontSize: 15} },
     { option: "Défi de concentration", style: { fontSize: 15} },
-    { option: "Réticule visée désactivée", style: { fontSize: 14} },
+    { option: "Constructions désactivées", style: { fontSize: 14} },
     { option: "Champ de vision réduit", style: { fontSize: 15} },
-    { option: "On relance", style: { fontSize: 15} },
+    { option: "PlayAbility ", style: { fontSize: 15} },
   ];
   
   

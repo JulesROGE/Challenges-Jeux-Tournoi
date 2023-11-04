@@ -5,11 +5,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-
 import Valorant from "./Valorant";
+import Fortnite from "./Fortnite";
 
 const style = {
   position: "absolute",
@@ -24,16 +23,24 @@ const style = {
 };
 
 export default function ActionAreaCard() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openValorant, setOpenValorant] = React.useState(false);
+  const [openRocketLeague, setOpenRocketLeague] = React.useState(false);
+  const [openFortnite, setOpenFortnite] = React.useState(false);
+
+  const handleOpenValorant = () => setOpenValorant(true);
+  const handleCloseValorant = () => setOpenValorant(false);
+  const handleOpenRocketLeague = () => setOpenRocketLeague(true);
+  const handleCloseRocketLeague = () => setOpenRocketLeague(false);
+  const handleOpenFortnite = () => setOpenFortnite(true);
+  const handleCloseFortnite = () => setOpenFortnite(false);
+
   return (
     <div className="Cards">
       <div className="Card">
         <Card sx={{ maxWidth: 345 }} className="Card">
           <CardActionArea>
             <CardMedia
-              onClick={handleOpen}
+              onClick={handleOpenValorant}
               component="img"
               height="140"
               image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
@@ -43,30 +50,18 @@ export default function ActionAreaCard() {
               <Typography gutterBottom variant="h5" component="div">
                 Valorant
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography> */}
             </CardContent>
           </CardActionArea>
         </Card>
         <Modal
-          open={open}
-          onClose={handleClose}
+          open={openValorant}
+          onClose={handleCloseValorant}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
             <h1 className="titre">Challenge Valorant</h1>
-
             <Valorant />
-
-            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography> */}
           </Box>
         </Modal>
       </div>
@@ -74,7 +69,7 @@ export default function ActionAreaCard() {
         <Card sx={{ maxWidth: 345 }} className="Card">
           <CardActionArea>
             <CardMedia
-              onClick={handleOpen}
+              onClick={handleOpenRocketLeague}
               component="img"
               height="140"
               image="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-0f2f0dbbb161b884d50f2ca09f4110bf"
@@ -84,23 +79,18 @@ export default function ActionAreaCard() {
               <Typography gutterBottom variant="h5" component="div">
                 Rocket League
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography> */}
             </CardContent>
           </CardActionArea>
         </Card>
         <Modal
-          open={open}
-          onClose={handleClose}
+          open={openRocketLeague}
+          onClose={handleCloseRocketLeague}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
             <h1 className="titre">Challenge Rocket League</h1>
             <h2 className="titre">PlayAbility</h2>
-            
           </Box>
         </Modal>
       </div>
@@ -108,33 +98,28 @@ export default function ActionAreaCard() {
         <Card sx={{ maxWidth: 345 }} className="Card">
           <CardActionArea>
             <CardMedia
-              onClick={handleOpen}
+              onClick={handleOpenFortnite}
               component="img"
               height="140"
-              image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
+              image="https://cdn.sortiraparis.com/images/80/66131/908390-fortnite-enfer-vert-map-skins-passe-de-combat-le-point-sur-les-nouveautes-de-la-saison-3.jpg"
               alt="green iguana"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Valorant
+                Fortnite
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography> */}
             </CardContent>
           </CardActionArea>
         </Card>
         <Modal
-          open={open}
-          onClose={handleClose}
+          open={openFortnite}
+          onClose={handleCloseFortnite}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <h1 className="titre">Challenge Valorant</h1>
-
-            <Valorant />
+            <h1 className="titre">Challenge Fortnite</h1>
+            <Fortnite />
           </Box>
         </Modal>
       </div>
