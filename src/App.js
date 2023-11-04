@@ -16,7 +16,7 @@ function App() {
 
       <h1 className="titre">Cards</h1>
 
-      <ActionAreaCard />
+      <ActionAreaCard className="ActionAreaCard" />
     </div>
   );
 }
