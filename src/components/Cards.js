@@ -46,11 +46,7 @@ export default function ActionAreaCard() {
               image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
               alt="green iguana"
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Valorant
-              </Typography>
-            </CardContent>
+
           </CardActionArea>
         </Card>
         <Modal
@@ -75,11 +71,7 @@ export default function ActionAreaCard() {
               image="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-0f2f0dbbb161b884d50f2ca09f4110bf"
               alt="green iguana"
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Rocket League
-              </Typography>
-            </CardContent>
+
           </CardActionArea>
         </Card>
         <Modal
@@ -104,11 +96,7 @@ export default function ActionAreaCard() {
               image="https://cdn.sortiraparis.com/images/80/66131/908390-fortnite-enfer-vert-map-skins-passe-de-combat-le-point-sur-les-nouveautes-de-la-saison-3.jpg"
               alt="green iguana"
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Fortnite
-              </Typography>
-            </CardContent>
+
           </CardActionArea>
         </Card>
         <Modal
