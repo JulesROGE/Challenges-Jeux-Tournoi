@@ -11,6 +11,9 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Valorant from "./Valorant";
 import Fortnite from "./Fortnite";
+import CS2 from "./CS2";
+import Minecraft from "./Minecraft";
+import LOL from "./LOL";
 
 const style = {
   position: "absolute",
@@ -28,6 +31,9 @@ export default function ActionAreaCard() {
   const [openValorant, setOpenValorant] = React.useState(false);
   const [openRocketLeague, setOpenRocketLeague] = React.useState(false);
   const [openFortnite, setOpenFortnite] = React.useState(false);
+  const [openCS2, setOpenCS2] = React.useState(false);
+  const [openLOL, setOpenLOL] = React.useState(false);
+  const [openMC, setOpenMC] = React.useState(false);
 
   const handleOpenValorant = () => setOpenValorant(true);
   const handleCloseValorant = () => setOpenValorant(false);
@@ -35,6 +41,12 @@ export default function ActionAreaCard() {
   const handleCloseRocketLeague = () => setOpenRocketLeague(false);
   const handleOpenFortnite = () => setOpenFortnite(true);
   const handleCloseFortnite = () => setOpenFortnite(false);
+  const handleOpenCS2 = () => setOpenCS2(true);
+  const handleCloseCS2 = () => setOpenCS2(false);
+  const handleOpenLOL = () => setOpenLOL(true);
+  const handleCloseLOL = () => setOpenLOL(false);
+  const handleOpenMC = () => setOpenMC(true);
+  const handleCloseMC = () => setOpenMC(false);
 
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isTextVisibleCHargement, setIsTextVisibleCHargement] = useState(false);
@@ -111,7 +123,6 @@ export default function ActionAreaCard() {
           >
             <Box sx={style}>
               <h1 className="titre">Challenge Rocket League</h1>
-              {/* <h2 className="titre">PlayAbility</h2> */}
               <CardActionArea
                 onClick={handleButtonClick}
                 className="RLBackgroundCard"
@@ -164,28 +175,28 @@ export default function ActionAreaCard() {
           </Modal>
         </div>
       </div>
-      {/* <div className="CardsRow1">
+      <div className="CardsRow1">
         <div className="Card">
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea>
               <CardMedia
-                onClick={handleOpenValorant}
+                onClick={handleOpenCS2}
                 component="img"
                 height="140"
-                image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
+                image="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg"
                 alt="green iguana"
               />
             </CardActionArea>
           </Card>
           <Modal
-            open={openValorant}
-            onClose={handleCloseValorant}
+            open={openCS2}
+            onClose={handleCloseCS2}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Valorant</h1>
-              <Valorant />
+              <h1 className="titre">Challenge CS2</h1>
+              <CS2 />
             </Box>
           </Modal>
         </div>
@@ -193,23 +204,23 @@ export default function ActionAreaCard() {
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea>
               <CardMedia
-                onClick={handleOpenRocketLeague}
+                onClick={handleOpenMC}
                 component="img"
                 height="140"
-                image="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-0f2f0dbbb161b884d50f2ca09f4110bf"
+                image="https://i0.wp.com/xxboxnews.blob.core.windows.net/prod/sites/9/2021/10/Minecraft_PC_Bundle_XboxClub_1920x1080.jpg?fit=1024%2C576&ssl=1"
                 alt="green iguana"
               />
             </CardActionArea>
           </Card>
           <Modal
-            open={openRocketLeague}
-            onClose={handleCloseRocketLeague}
+            open={openMC}
+            onClose={handleCloseMC}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Rocket League</h1>
-              <h2 className="titre">PlayAbility</h2>
+              <h1 className="titre">Challenge Minecraft</h1>
+              <Minecraft />
             </Box>
           </Modal>
         </div>
@@ -217,27 +228,27 @@ export default function ActionAreaCard() {
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea>
               <CardMedia
-                onClick={handleOpenFortnite}
+                onClick={handleOpenLOL}
                 component="img"
                 height="140"
-                image="https://cdn.sortiraparis.com/images/80/66131/908390-fortnite-enfer-vert-map-skins-passe-de-combat-le-point-sur-les-nouveautes-de-la-saison-3.jpg"
+                image="https://www.global-esports.news/wp-content/uploads/2022/01/League-of-Legends-2022.jpg"
                 alt="green iguana"
               />
             </CardActionArea>
           </Card>
           <Modal
-            open={openFortnite}
-            onClose={handleCloseFortnite}
+            open={openLOL}
+            onClose={handleCloseLOL}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Fortnite</h1>
-              <Fortnite />
+              <h1 className="titre">Challenge League of Legend</h1>
+              <LOL />
             </Box>
           </Modal>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
