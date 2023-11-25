@@ -50,7 +50,11 @@ export default function ActionAreaCard() {
   const handleOpenLOL = () => setOpenLOL(true);
   const handleCloseLOL = () => setOpenLOL(false);
   const handleOpenMC = () => setOpenMC(true);
-  const handleCloseMC = () => setOpenMC(false);
+  const handleCloseMC = () => {
+    setIsTextVisibleCHargement(false);
+    setOpenMC(false);
+    setIsTextVisible(false);
+  };
 
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isTextVisibleCHargement, setIsTextVisibleCHargement] = useState(false);
@@ -229,7 +233,36 @@ export default function ActionAreaCard() {
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Minecraft</h1>
+              <h1 className="titre">Challenge Minecraft Bed Wars</h1>
+              <CardActionArea
+                onClick={handleButtonClick}
+                className="RLBackgroundCard"
+              >
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    <h5
+                      className={
+                        isTextVisibleCHargement ? "hidden" : "Click_Me"
+                      }
+                    >
+                      Challenge Mystère
+                    </h5>
+                    <h2
+                      className={isTextVisibleCHargement ? "titre Reveal_Challenge" : "hidden"}
+                    >
+                      {isTextVisible ? (
+                        "PlayAbility"
+                      ) : (
+                        <CircularProgress
+                          variant="determinate"
+                          value={progress}
+                          className="CircularProgress"
+                        />
+                      )}
+                    </h2>
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Box>
           </Modal>
         </div>
