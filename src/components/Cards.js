@@ -38,7 +38,11 @@ export default function ActionAreaCard() {
   const handleOpenValorant = () => setOpenValorant(true);
   const handleCloseValorant = () => setOpenValorant(false);
   const handleOpenRocketLeague = () => setOpenRocketLeague(true);
-  const handleCloseRocketLeague = () => setOpenRocketLeague(false);
+  const handleCloseRocketLeague = () => {
+    setIsTextVisibleCHargement(false);
+    setOpenRocketLeague(false);
+    setIsTextVisible(false);
+  };
   const handleOpenFortnite = () => setOpenFortnite(true);
   const handleCloseFortnite = () => setOpenFortnite(false);
   const handleOpenCS2 = () => setOpenCS2(true);
@@ -65,6 +69,7 @@ export default function ActionAreaCard() {
           setIsTextVisible(true);
           return 0;
         }
+        console.log(prevProgress);
         return prevProgress + 10;
       });
     }, 500);
@@ -80,7 +85,7 @@ export default function ActionAreaCard() {
       <div className="CardsRow1">
         <div className="Card Valorant">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="ValorantCardActionArea">
               <CardMedia
                 onClick={handleOpenValorant}
                 component="img"
@@ -104,7 +109,7 @@ export default function ActionAreaCard() {
         </div>
         <div className="Card Rocket-League">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="RocketLeagueCardActionArea">
               <CardMedia
                 onClick={handleOpenRocketLeague}
                 component="img"
@@ -152,7 +157,7 @@ export default function ActionAreaCard() {
         </div>
         <div className="Card Fortnite">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="FortniteCardActionArea">
               <CardMedia
                 onClick={handleOpenFortnite}
                 component="img"
@@ -175,10 +180,10 @@ export default function ActionAreaCard() {
           </Modal>
         </div>
       </div>
-      <div className="CardsRow1">
-        <div className="Card">
+      <div className="CardsRow2">
+        <div className="Card CS2">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="CS2CardActionArea">
               <CardMedia
                 onClick={handleOpenCS2}
                 component="img"
@@ -200,9 +205,9 @@ export default function ActionAreaCard() {
             </Box>
           </Modal>
         </div>
-        <div className="Card">
+        <div className="Card Minecraft">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="MinecraftCardActionArea">
               <CardMedia
                 onClick={handleOpenMC}
                 component="img"
@@ -224,9 +229,9 @@ export default function ActionAreaCard() {
             </Box>
           </Modal>
         </div>
-        <div className="Card">
+        <div className="Card LOL">
           <Card sx={{ maxWidth: 345 }} className="Card">
-            <CardActionArea>
+            <CardActionArea className="LOLCardActionArea">
               <CardMedia
                 onClick={handleOpenLOL}
                 component="img"
