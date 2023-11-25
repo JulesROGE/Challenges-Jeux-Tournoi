@@ -134,21 +134,26 @@ export default function ActionAreaCard() {
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    {isTextVisibleCHargement
-                      ? null
-                      : <h5 className="Click_Me">Cliquez ici pour voir le challenge</h5>}
-                    {isTextVisibleCHargement ? (
-                      <h2 className="titre">
-                        {isTextVisible ? (
-                          "PlayAbility"
-                        ) : (
-                          <CircularProgress
-                            variant="determinate"
-                            value={progress}
-                          />
-                        )}
-                      </h2>
-                    ) : null}
+                    <h5
+                      className={
+                        isTextVisibleCHargement ? "hidden" : "Click_Me"
+                      }
+                    >
+                      Cliquez ici pour voir le challenge
+                    </h5>
+                    <h2
+                      className={isTextVisibleCHargement ? "titre Reveal_Challenge" : "hidden"}
+                    >
+                      {isTextVisible ? (
+                        "PlayAbility"
+                      ) : (
+                        <CircularProgress
+                          variant="determinate"
+                          value={progress}
+                          className="CircularProgress"
+                        />
+                      )}
+                    </h2>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -225,7 +230,6 @@ export default function ActionAreaCard() {
           >
             <Box sx={style}>
               <h1 className="titre">Challenge Minecraft</h1>
-              <Minecraft />
             </Box>
           </Modal>
         </div>
