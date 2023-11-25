@@ -136,7 +136,7 @@ export default function ActionAreaCard() {
                   <Typography gutterBottom variant="h5" component="div">
                     {isTextVisibleCHargement
                       ? null
-                      : "Cliquez ici pour voir le challenge"}
+                      : <h5 className="Click_Me">Cliquez ici pour voir le challenge</h5>}
                     {isTextVisibleCHargement ? (
                       <h2 className="titre">
                         {isTextVisible ? (
