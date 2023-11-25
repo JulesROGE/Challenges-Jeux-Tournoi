@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+// README.md
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projet ReactJS - Tournoi de jeux
 
-## Available Scripts
+Ce projet est une application web développée en utilisant ReactJS. Il s'agit d'une page web affichant une liste de cartes représentant les challenges pour les 6 jeux du tournoi.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Assurez-vous d'avoir Node.js et npm installés sur votre machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Clonez ce dépôt en utilisant la commande suivante :
 
-### `npm test`
+    ```bash
+    git clone <URL_DU_REPO>
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Accédez au répertoire du projet :
 
-### `npm run build`
+    ```bash
+    cd nom-du-projet
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Installez les dépendances en exécutant la commande suivante :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Une fois l'installation terminée, vous pouvez démarrer l'application en utilisant la commande suivante :
 
-### `npm run eject`
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. Ouvrez votre navigateur et accédez à l'URL suivante : `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Fonctionnalités
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Affichage d'une liste de cartes représentant les challenges pour les 6 jeux du tournoi.
+- Possibilité de cliquer sur une carte pour afficher plus de détails sur le challenge correspondant.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Structure du projet
 
-## Learn More
+Le projet est organisé de la manière suivante :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/` : Ce répertoire contient les fichiers sources de l'application.
+  - `components/` : Ce répertoire contient les composants réutilisables de l'application.
+  - `pages/` : Ce répertoire contient les pages principales de l'application.
+  - `data/` : Ce répertoire contient les données des challenges.
+  - `App.js` : Le composant racine de l'application.
+  - `index.js` : Le point d'entrée de l'application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contribuer
 
-### Code Splitting
+Si vous souhaitez contribuer à ce projet, vous pouvez suivre les étapes ci-dessous :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork ce dépôt.
 
-### Analyzing the Bundle Size
+2. Créez une branche pour votre fonctionnalité ou votre correction de bug :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```bash
+    git checkout -b nom-de-la-branche
+    ```
 
-### Making a Progressive Web App
+3. Effectuez vos modifications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Committez vos modifications :
 
-### Advanced Configuration
+    ```bash
+    git commit -m "Description des modifications"
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. Poussez vos modifications vers votre dépôt forké :
 
-### Deployment
+    ```bash
+    git push origin nom-de-la-branche
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+6. Ouvrez une pull request vers ce dépôt.
 
-### `npm run build` fails to minify
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
+// FILE: App.js
