@@ -145,7 +145,7 @@ export default function ActionAreaCard() {
                     >
                       Cliquez ici pour voir le challenge
                     </h5>
-                    <h2
+                    <h3
                       className={isTextVisibleCHargement ? "titre Reveal_Challenge" : "hidden"}
                     >
                       {isTextVisible ? (
@@ -157,7 +157,7 @@ export default function ActionAreaCard() {
                           className="CircularProgress"
                         />
                       )}
-                    </h2>
+                    </h3>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -236,30 +236,56 @@ export default function ActionAreaCard() {
               <h1 className="titre">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className="RLBackgroundCard"
+                className="MCBackgroundCardMystery"
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5
                       className={
-                        isTextVisibleCHargement ? "hidden" : "Click_Me"
+                        isTextVisibleCHargement ? "hidden" : "Click_Me_Mystery_Challenge"
                       }
                     >
-                      Challenge Mystère
+                      Challenge Mystère (+ 5 points)
                     </h5>
-                    <h2
-                      className={isTextVisibleCHargement ? "titre Reveal_Challenge" : "hidden"}
+                    <h5
+                      className={isTextVisibleCHargement ? "titre Reveal_Mystery_Challenge" : "hidden"}
                     >
                       {isTextVisible ? (
-                        "PlayAbility"
+                        "PlayAbility (+ 5 points)"
                       ) : (
                         <CircularProgress
                           variant="determinate"
                           value={progress}
-                          className="CircularProgress"
+                          className="CircularProgress_Mystery_Challenge"
                         />
                       )}
-                    </h2>
+                    </h5>
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActionArea
+                className="MCBackgroundCard"
+              >
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    <h5
+                      className="Click_Me"
+                    >
+                      Lunettes de simulation (+ 3 points)
+                    </h5>
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActionArea
+                className="MCBackgroundCard"
+              >
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    <h5
+                      className="Click_Me"
+                    >
+                      Absence de son (+ 2 points)
+                    </h5>
                   </Typography>
                 </CardContent>
               </CardActionArea>
