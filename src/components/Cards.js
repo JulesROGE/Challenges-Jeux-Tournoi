@@ -1,4 +1,4 @@
-import "./Card.sass";
+import "./Card.scss";
 // import * as React from "react";
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
@@ -256,8 +256,9 @@ export default function ActionAreaCard() {
                         <CircularProgress
                           variant="determinate"
                           value={progress}
-                          className="CircularProgress_Mystery_Challenge"
+                          className="CircularProgress"
                         />
+                        // <div className="Mystery_Challenge">TEST</div>
                       )}
                     </h5>
                   </Typography>

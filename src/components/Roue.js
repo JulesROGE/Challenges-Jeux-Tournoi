@@ -1,4 +1,4 @@
-import "./Roue.sass";
+import "./Roue.scss";
 import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import { Button } from "@mui/material";

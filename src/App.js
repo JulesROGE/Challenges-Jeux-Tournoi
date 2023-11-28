@@ -5,7 +5,7 @@ import ActionAreaCard from "./components/Cards";
 import Valorant from "./components/Valorant";
 
 
-import "./App.sass";
+import "./App.scss";
 
 function App() {
   return (
