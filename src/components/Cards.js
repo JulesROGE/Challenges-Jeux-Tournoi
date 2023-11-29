@@ -76,7 +76,7 @@ export default function ActionAreaCard() {
         console.log(prevProgress);
         return prevProgress + 10;
       });
-    }, 500);
+    }, 200);
   };
 
   // const handleCloseRocketLeague = () => {
