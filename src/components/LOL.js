@@ -19,10 +19,8 @@ export default function Roue() {
   
 
   const bgs = [
-    "#79AFEB",
     "#F5C75D",
     "#2B619D",
-    "#FFE29E",
 
   ];
 
