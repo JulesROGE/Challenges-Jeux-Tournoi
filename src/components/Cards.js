@@ -235,7 +235,7 @@ export default function ActionAreaCard() {
               <h1 className="titre">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className="MCBackgroundCardMystery"
+                className={`MCBackgroundCardMystery ${isTextVisible ? "zoom" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
