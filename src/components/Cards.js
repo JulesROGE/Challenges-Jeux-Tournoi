@@ -12,7 +12,6 @@ import Modal from "@mui/material/Modal";
 import Valorant from "./Valorant";
 import Fortnite from "./Fortnite";
 import CS2 from "./CS2";
-import Minecraft from "./Minecraft";
 import LOL from "./LOL";
 
 const style = {
