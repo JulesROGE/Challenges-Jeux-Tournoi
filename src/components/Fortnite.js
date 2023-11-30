@@ -31,7 +31,7 @@ export default function Roue() {
   };
   // style={{ transform: "scale(1.5)"}}
   return (
-    <div className="Roue" > 
+    <div className="Roue" onClick={handleSpinClick}>
       <div style={{ transform: "rotate(45deg)" }}>
         <Wheel
           mustStartSpinning={mustSpin}
@@ -39,10 +39,7 @@ export default function Roue() {
           data={data}
           outerBorderWidth={1}
           outerBorderColor="black"
-          pointerProps={
-            {
-            }
-          }
+          pointerProps={{}}
           textSize="10px"
           textColors={["black"]}
           backgroundColors={bgs}
@@ -50,18 +47,8 @@ export default function Roue() {
             setMustSpin(false);
           }}
           interface="canvas"
-
-
         />
       </div>
-      <Button
-        variant="contained"
-        color="error"
-        style={{ width: "100px" }}
-        onClick={handleSpinClick}
-      >
-        SPIN
-      </Button>
     </div>
   );
 }

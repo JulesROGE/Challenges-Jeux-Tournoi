@@ -8,20 +8,15 @@ export default function Roue() {
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const data = [
-    { option: "Doigts liés entre eux", style: { fontSize: 15} },
-    { option: "Absence de son", style: { fontSize: 15} },
-    { option: "Défi de concentration", style: { fontSize: 15} },
-    { option: "Réticule visée désactivée", style: { fontSize: 14} },
-    { option: "Champ de vision réduit", style: { fontSize: 15} },
-    { option: "On relance", style: { fontSize: 15} },
+    { option: "Doigts liés entre eux", style: { fontSize: 15 } },
+    { option: "Absence de son", style: { fontSize: 15 } },
+    { option: "Défi de concentration", style: { fontSize: 15 } },
+    { option: "Réticule visée désactivée", style: { fontSize: 14 } },
+    { option: "Champ de vision réduit", style: { fontSize: 15 } },
+    { option: "On relance", style: { fontSize: 15 } },
   ];
-  
-  
 
-  const bgs = [
-    "#F5C75D",
-    "#2B619D",
-  ];
+  const bgs = ["#F5C75D", "#2B619D"];
 
   const handleSpinClick = () => {
     console.log("handleSpinClick");
@@ -29,9 +24,8 @@ export default function Roue() {
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
   };
-  // style={{ transform: "scale(1.5)"}}
   return (
-    <div className="Roue" > 
+    <div className="Roue" onClick={handleSpinClick}>
       <div style={{ transform: "rotate(45deg)" }}>
         <Wheel
           mustStartSpinning={mustSpin}
@@ -39,10 +33,7 @@ export default function Roue() {
           data={data}
           outerBorderWidth={1}
           outerBorderColor="black"
-          pointerProps={
-            {
-            }
-          }
+          pointerProps={{}}
           textSize="10px"
           textColors={["black"]}
           backgroundColors={bgs}
@@ -50,18 +41,8 @@ export default function Roue() {
             setMustSpin(false);
           }}
           interface="canvas"
-
-
         />
       </div>
-      <Button
-        variant="contained"
-        color="error"
-        style={{ width: "100px" }}
-        onClick={handleSpinClick}
-      >
-        SPIN
-      </Button>
     </div>
   );
 }
