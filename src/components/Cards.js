@@ -87,7 +87,7 @@ export default function ActionAreaCard() {
     <div className="Cards">
       <div className="CardsRow1">
         <div className="Card Valorant">
-          <Card sx={{ maxWidth: 345 }} className="Card">
+          <Card sx={{ maxWidth: 345}} className="Card">
             <CardActionArea className="ValorantCardActionArea">
               <CardMedia
                 onClick={handleOpenValorant}
@@ -103,9 +103,9 @@ export default function ActionAreaCard() {
             onClose={handleCloseValorant}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            className="ValoModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Valorant</h1>
               <Valorant />
             </Box>
           </Modal>
@@ -127,10 +127,10 @@ export default function ActionAreaCard() {
             onClose={handleCloseRocketLeague}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            className="ModalChallenge"
+            className="RLModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Rocket League</h1>
+              <h1 className="titre challenge_title">Challenge Rocket League</h1>
               <CardActionArea
                 onClick={handleButtonClick}
                 className="RLBackgroundCard"
@@ -180,9 +180,9 @@ export default function ActionAreaCard() {
             onClose={handleCloseFortnite}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            className="FTModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Fortnite</h1>
               <Fortnite />
             </Box>
           </Modal>
@@ -206,9 +206,9 @@ export default function ActionAreaCard() {
             onClose={handleCloseCS2}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            className="CS2ModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge CS2</h1>
               <CS2 />
             </Box>
           </Modal>
@@ -230,12 +230,13 @@ export default function ActionAreaCard() {
             onClose={handleCloseMC}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            className="MCModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge Minecraft Bed Wars</h1>
+              <h1 className="titre challenge_title">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className={`MCBackgroundCardMystery ${isTextVisible ? "zoom" : "hidden"}`}
+                className={`MCBackgroundCardMystery ${isTextVisible ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
@@ -257,7 +258,6 @@ export default function ActionAreaCard() {
                           value={progress}
                           className="CircularProgress"
                         />
-                        // <div className="Mystery_Challenge">TEST</div>
                       )}
                     </h5>
                   </Typography>
@@ -309,9 +309,9 @@ export default function ActionAreaCard() {
             onClose={handleCloseLOL}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            className="LOLModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre">Challenge League of Legend</h1>
               <LOL />
             </Box>
           </Modal>

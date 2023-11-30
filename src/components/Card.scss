@@ -20,12 +20,64 @@
 .css-1ri6ub7-MuiPaper-root-MuiCard-root {
   zoom: 2.25;
 }
+.css-a0n6xq {
+  zoom: 1.9;
+  width: 35vw !important;
+}
+
+.ValoModalChallenge,
+.FTModalChallenge,
+.CS2ModalChallenge,
+.LOLModalChallenge {
+  .css-a0n6xq {
+    padding: 10px !important;
+  }
+}
+
+.RLModalChallenge,
+.MCModalChallenge {
+  .css-a0n6xq {
+    padding-top: 0px !important;
+  }
+}
+
+.challenge_title {
+  margin: 10px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+
 
 @media(-webkit-device-pixel-ratio: 1.5){
   .css-1ri6ub7-MuiPaper-root-MuiCard-root {
     zoom: 1.48;
   }
+
+  .ValoModalChallenge .css-a0n6xq,
+  .RLModalChallenge .css-a0n6xq,
+  .FTModalChallenge .css-a0n6xq,
+  .CS2ModalChallenge .css-a0n6xq,
+  .MCModalChallenge .css-a0n6xq,
+  .LOLModalChallenge .css-a0n6xq {
+    zoom: 1.25;
+    width: 50vw !important;
+  }
+
+  .ValoModalChallenge .css-a0n6xq,
+  .FTModalChallenge .css-a0n6xq,
+  .CS2ModalChallenge .css-a0n6xq,
+  .LOLModalChallenge .css-a0n6xq {
+    padding: 0px !important;
+  }
+
+  .RLModalChallenge .css-a0n6xq,
+  .MCModalChallenge .css-a0n6xq {
+    padding-top: 0px !important;
+  }
+
 }
+
 
 .CardsRow1 {
   display: flex;
@@ -126,7 +178,7 @@
   display: none;
 }
 
-.zoom {
+.Reveal_Mystery_Challenge_Style {
   transform: scale(1.5);
   background-color: #DF7400 !important;
   transition: transform .2s;
