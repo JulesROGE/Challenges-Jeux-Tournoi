@@ -1,5 +1,4 @@
 import "./Card.scss";
-// import * as React from "react";
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -236,19 +235,19 @@ export default function ActionAreaCard() {
               <h1 className="titre challenge_title">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className={`MCBackgroundCardMystery ${isTextVisible ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
+                className={`MCBackgroundCardMystery ${isTextVisibleCHargement ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5
                       className={
-                        isTextVisibleCHargement ? "hidden" : "Click_Me_Mystery_Challenge"
+                        isTextVisibleCHargement ? "hidden" : "Click_Me_Mystery_Challenge Reveal_Mystery_Challenge"
                       }
                     >
                       Challenge Mystère (+ 5 points)
                     </h5>
                     <h5
-                      className={isTextVisibleCHargement ? "titre Reveal_Mystery_Challenge" : "hidden"}
+                      className={isTextVisibleCHargement ? "titre" : "hidden"}
                     >
                       {isTextVisible ? (
                         "PlayAbility (+ 5 points)"
