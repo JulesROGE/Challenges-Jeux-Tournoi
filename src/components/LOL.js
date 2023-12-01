@@ -1,7 +1,6 @@
 import "./Roue.scss";
 import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
-import { Button } from "@mui/material";
 
 export default function Roue() {
   const [mustSpin, setMustSpin] = useState(false);
