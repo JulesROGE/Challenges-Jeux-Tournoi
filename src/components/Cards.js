@@ -55,10 +55,73 @@ export default function ActionAreaCard() {
   };
 
   const [isTextVisible, setIsTextVisible] = useState(false);
+  const [isTextVisible_Mystery_Challenge, setIsTextVisible_Mystery_Challenge] = useState(false);
+  const [isTextVisible_First_Choice_Challenge, setIsTextVisible_Mystery_Challenge_First_Choice_Challenge] = useState(false);
+  const [isTextVisible_Second_Choice_Challenge, setIsTextVisible_Mystery_Challenge_Second_Choice_Challenge] = useState(false);
   const [isTextVisibleCHargement, setIsTextVisibleCHargement] = useState(false);
+  const [isTextVisibleCHargement_Mystery_Challenge, setIsTextVisibleCHargement_Mystery_Challenge] = useState(false);
+  const [isTextVisibleCHargement_First_Choice_Challenge, setIsTextVisibleCHargement_First_Choice_Challenge] = useState(false);
+  const [isTextVisibleCHargement_Second_Choice_Challenge, setIsTextVisibleCHargement_Second_Choice_Challenge] = useState(false);
   const [progress, setProgress] = React.useState(0);
 
   const handleButtonClick = () => {
+    setIsTextVisibleCHargement(true);
+    // Réinitialisez la progression
+    setProgress(0);
+
+    // Utilisez la valeur de "progress" pour calculer le délai
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(timer);
+          setIsTextVisible(true);
+          return 0;
+        }
+        console.log(prevProgress);
+        return prevProgress + 10;
+      });
+    }, 200);
+  };
+
+  const handleButtonClickMysteryChallenge = () => {
+    setIsTextVisibleCHargement_Mystery_Challenge(true);
+    // Réinitialisez la progression
+    setProgress(0);
+
+    // Utilisez la valeur de "progress" pour calculer le délai
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(timer);
+          setIsTextVisible_Mystery_Challenge(true);
+          return 0;
+        }
+        console.log(prevProgress);
+        return prevProgress + 10;
+      });
+    }, 200);
+  };
+
+  const handleButtonClickFirstChoiceChallenge = () => {
+    setIsTextVisibleCHargement(true);
+    // Réinitialisez la progression
+    setProgress(0);
+
+    // Utilisez la valeur de "progress" pour calculer le délai
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(timer);
+          setIsTextVisible(true);
+          return 0;
+        }
+        console.log(prevProgress);
+        return prevProgress + 10;
+      });
+    }, 200);
+  };
+
+  const handleButtonClickSecondChoiceChallenge = () => {
     setIsTextVisibleCHargement(true);
     // Réinitialisez la progression
     setProgress(0);
@@ -234,22 +297,22 @@ export default function ActionAreaCard() {
             <Box sx={style}>
               <h1 className="titre challenge_title">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
-                onClick={handleButtonClick}
-                className={`MCBackgroundCardMystery ${isTextVisibleCHargement ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
+                onClick={handleButtonClickMysteryChallenge}
+                className={`MCBackgroundCardMystery ${isTextVisibleCHargement_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5
                       className={
-                        isTextVisibleCHargement ? "hidden" : "Click_Me_Mystery_Challenge Reveal_Mystery_Challenge"
+                        isTextVisibleCHargement_Mystery_Challenge ? "hidden" : "Click_Me_Mystery_Challenge Reveal_Mystery_Challenge"
                       }
                     >
                       Challenge Mystère (+ 5 points)
                     </h5>
                     <h5
-                      className={isTextVisibleCHargement ? "titre" : "hidden"}
+                      className={isTextVisibleCHargement_Mystery_Challenge ? "titre" : "hidden"}
                     >
-                      {isTextVisible ? (
+                      {isTextVisible_Mystery_Challenge ? (
                         "PlayAbility (+ 5 points)"
                       ) : (
                         <CircularProgress
