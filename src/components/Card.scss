@@ -250,11 +250,13 @@
   .Dezoom_Challenge_Up_Style {
     transform: scale(0.5);
     transition: transform .2s;
+    transform: scale(0.5) translate(0px, -5rem);
   }
 
   .Dezoom_Challenge_Down_Style {
     transform: scale(0.5);
     transition: transform 0.2s;
+    transform: scale(0.5) translate(0px, 5rem);
   }
 }
 
