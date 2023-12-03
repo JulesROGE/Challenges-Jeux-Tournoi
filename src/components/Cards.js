@@ -49,15 +49,19 @@ export default function ActionAreaCard() {
   const handleCloseLOL = () => setOpenLOL(false);
   const handleOpenMC = () => setOpenMC(true);
   const handleCloseMC = () => {
-    setIsTextVisibleCHargement(false);
     setOpenMC(false);
-    setIsTextVisible(false);
+    setIsTextVisibleCHargement_Mystery_Challenge(false);
+    setIsTextVisibleCHargement_First_Choice_Challenge(false);
+    setIsTextVisibleCHargement_Second_Choice_Challenge(false);
+    setIsTextVisible_Mystery_Challenge(false);
+    setIsTextVisible_First_Choice_Challenge(false);
+    setIsTextVisible_Second_Choice_Challenge(false);
   };
 
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isTextVisible_Mystery_Challenge, setIsTextVisible_Mystery_Challenge] = useState(false);
-  const [isTextVisible_First_Choice_Challenge, setIsTextVisible_Mystery_Challenge_First_Choice_Challenge] = useState(false);
-  const [isTextVisible_Second_Choice_Challenge, setIsTextVisible_Mystery_Challenge_Second_Choice_Challenge] = useState(false);
+  const [isTextVisible_First_Choice_Challenge, setIsTextVisible_First_Choice_Challenge] = useState(false);
+  const [isTextVisible_Second_Choice_Challenge, setIsTextVisible_Second_Choice_Challenge] = useState(false);
   const [isTextVisibleCHargement, setIsTextVisibleCHargement] = useState(false);
   const [isTextVisibleCHargement_Mystery_Challenge, setIsTextVisibleCHargement_Mystery_Challenge] = useState(false);
   const [isTextVisibleCHargement_First_Choice_Challenge, setIsTextVisibleCHargement_First_Choice_Challenge] = useState(false);
@@ -103,41 +107,12 @@ export default function ActionAreaCard() {
   };
 
   const handleButtonClickFirstChoiceChallenge = () => {
-    setIsTextVisibleCHargement(true);
-    // Réinitialisez la progression
-    setProgress(0);
-
-    // Utilisez la valeur de "progress" pour calculer le délai
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (prevProgress >= 100) {
-          clearInterval(timer);
-          setIsTextVisible(true);
-          return 0;
-        }
-        console.log(prevProgress);
-        return prevProgress + 10;
-      });
-    }, 200);
+    setIsTextVisible_First_Choice_Challenge(true);
   };
 
   const handleButtonClickSecondChoiceChallenge = () => {
-    setIsTextVisibleCHargement(true);
-    // Réinitialisez la progression
-    setProgress(0);
-
-    // Utilisez la valeur de "progress" pour calculer le délai
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (prevProgress >= 100) {
-          clearInterval(timer);
-          setIsTextVisible(true);
-          return 0;
-        }
-        console.log(prevProgress);
-        return prevProgress + 10;
-      });
-    }, 200);
+    console.log("test");
+    setIsTextVisible_Second_Choice_Challenge(true);
   };
 
   // const handleCloseRocketLeague = () => {
@@ -298,13 +273,13 @@ export default function ActionAreaCard() {
               <h1 className="titre challenge_title">Challenge Minecraft Bed Wars</h1>
               <CardActionArea
                 onClick={handleButtonClickMysteryChallenge}
-                className={`MCBackgroundCardMystery ${isTextVisibleCHargement_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style" : "hidden"}`}
+                className={`MCBackgroundCardMystery ${isTextVisibleCHargement_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style" : "hidden"} ${isTextVisible_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style_Back" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Dezoom_Challenge_Down_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5
                       className={
-                        isTextVisibleCHargement_Mystery_Challenge ? "hidden" : "Click_Me_Mystery_Challenge Reveal_Mystery_Challenge"
+                        isTextVisibleCHargement_Mystery_Challenge ? "hidden" : "Click_Me_Mystery_Challenge"
                       }
                     >
                       Challenge Mystère (+ 5 points)
@@ -326,7 +301,8 @@ export default function ActionAreaCard() {
                 </CardContent>
               </CardActionArea>
               <CardActionArea
-                className="MCBackgroundCard"
+                onClick={handleButtonClickFirstChoiceChallenge}
+                className={`MCBackgroundCard ${isTextVisibleCHargement_Mystery_Challenge ? "Dezoom_Challenge_Style" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Reveal_First_Choice_Challenge_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
@@ -339,7 +315,8 @@ export default function ActionAreaCard() {
                 </CardContent>
               </CardActionArea>
               <CardActionArea
-                className="MCBackgroundCard"
+                onClick={handleButtonClickSecondChoiceChallenge}
+                className={`MCBackgroundCard ${isTextVisibleCHargement_Mystery_Challenge ? "Dezoom_Challenge_Up_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Reveal_Second_Choice_Challenge_Style" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"}`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
