@@ -170,7 +170,8 @@ export default function ActionAreaCard() {
               <h1 className="titre challenge_title">Challenge Rocket League</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className="RLBackgroundCard"
+                className={`RLBackgroundCard ${isTextVisible ? "Reveal_Challenge_Animation" : "hidden"}`}
+
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">

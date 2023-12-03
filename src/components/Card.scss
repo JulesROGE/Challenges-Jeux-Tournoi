@@ -155,6 +155,11 @@
   text-align: center;
 }
 
+.Reveal_Challenge_Animation {
+  animation: rotate 0.2s ease-in-out;
+  background-color: #F5C75D !important;
+}
+
 .Click_Me_Mystery_Challenge {
   position: absolute;
   top: 50%;
@@ -179,16 +184,26 @@
   display: none;
 }
 
+// .Reveal_Mystery_Challenge_Style {
+//   transform: scale(1.5);
+//   transition: transform .2s;
+// }
+
 .Reveal_Mystery_Challenge_Style {
+  animation: fadeIn 0.2s ease-in-out;
   transform: scale(1.5);
-  transition: transform .2s;
 }
+
+// .Reveal_Mystery_Challenge_Style_Back {
+//   background-color: #DF7400 !important;
+//   transform: rotateX(360deg) scale(1.5);
+// }
 
 .Reveal_Mystery_Challenge_Style_Back {
   background-color: #DF7400 !important;
+  animation: rotateAndScale 0.2s ease-in-out;
   transform: rotateX(360deg) scale(1.5);
 }
-
 
 .Reveal_First_Choice_Challenge_Style {
   transform: scale(1.5);
@@ -215,3 +230,33 @@
   transition: transform 0.2s;
 }
 
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes rotateAndScale {
+  from {
+    transform: rotateX(360deg) scale(1.5);
+  }
+  to {
+    transform: rotateX(0deg) scale(1.5);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(360deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
