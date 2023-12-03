@@ -283,10 +283,10 @@ export default function ActionAreaCard() {
                         isTextVisibleCHargement_Mystery_Challenge ? "hidden" : "Click_Me_Mystery_Challenge"
                       }
                     >
-                      Challenge Mystère (+ 5 points)
+                      Challenge Mystere (+ 5 points)
                     </h5>
                     <h5
-                      className={isTextVisibleCHargement_Mystery_Challenge ? "titre" : "hidden"}
+                      className={isTextVisibleCHargement_Mystery_Challenge ? "titre Click_Me" : "hidden"}
                     >
                       {isTextVisible_Mystery_Challenge ? (
                         "PlayAbility (+ 5 points)"

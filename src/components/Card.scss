@@ -184,52 +184,79 @@
   display: none;
 }
 
-// .Reveal_Mystery_Challenge_Style {
-//   transform: scale(1.5);
-//   transition: transform .2s;
-// }
+@media(-webkit-device-pixel-ratio: 1){
+  .Reveal_Mystery_Challenge_Style {
+    animation: fadeIn 0.2s ease-in-out;
+    transform: scale(1.5);
+  }
 
-.Reveal_Mystery_Challenge_Style {
-  animation: fadeIn 0.2s ease-in-out;
-  transform: scale(1.5);
+  .Reveal_Mystery_Challenge_Style_Back {
+    background-color: #DF7400 !important;
+    animation: rotateAndScale 0.2s ease-in-out;
+    transform: rotateX(360deg) scale(1.5);
+  }
+
+  .Reveal_First_Choice_Challenge_Style {
+    transform: scale(1.5);
+    transition: transform .2s;
+  }
+
+  .Reveal_Second_Choice_Challenge_Style {
+    transform: scale(1.5);
+    transition: transform .2s;
+  }
+
+  .Dezoom_Challenge_Style {
+    transform: scale(0.5);
+    transition: transform .2s;
+  }
+
+  .Dezoom_Challenge_Up_Style {
+    transform: scale(0.5) translate(0px, -8rem);
+    transition: transform .2s;
+  }
+
+  .Dezoom_Challenge_Down_Style {
+    transform: scale(0.5) translate(0px, 8rem);
+    transition: transform 0.2s;
+  }
 }
 
-// .Reveal_Mystery_Challenge_Style_Back {
-//   background-color: #DF7400 !important;
-//   transform: rotateX(360deg) scale(1.5);
-// }
+@media(-webkit-device-pixel-ratio: 1.5){
 
-.Reveal_Mystery_Challenge_Style_Back {
-  background-color: #DF7400 !important;
-  animation: rotateAndScale 0.2s ease-in-out;
-  transform: rotateX(360deg) scale(1.5);
+  .Reveal_Mystery_Challenge_Style {
+    transform: scale(1);
+  }
+
+  .Reveal_Mystery_Challenge_Style_Back {
+    background-color: #DF7400 !important;
+    animation: rotate 0.2s ease-in-out;
+    transform: rotateX(360deg);
+  }
+
+  .Reveal_First_Choice_Challenge_Style {
+    transform: scale(1);
+  }
+
+  .Reveal_Second_Choice_Challenge_Style {
+    transform: scale(1);
+  }
+
+  .Dezoom_Challenge_Style {
+    transform: scale(0.5);
+    transition: transform .2s;
+  }
+
+  .Dezoom_Challenge_Up_Style {
+    transform: scale(0.5);
+    transition: transform .2s;
+  }
+
+  .Dezoom_Challenge_Down_Style {
+    transform: scale(0.5);
+    transition: transform 0.2s;
+  }
 }
-
-.Reveal_First_Choice_Challenge_Style {
-  transform: scale(1.5);
-  transition: transform .2s;
-}
-
-.Reveal_Second_Choice_Challenge_Style {
-  transform: scale(1.5);
-  transition: transform .2s;
-}
-
-.Dezoom_Challenge_Style {
-  transform: scale(0.5);
-  transition: transform .2s;
-}
-
-.Dezoom_Challenge_Up_Style {
-  transform: scale(0.5) translate(0px, -8rem);
-  transition: transform .2s;
-}
-
-.Dezoom_Challenge_Down_Style {
-  transform: scale(0.5) translate(0px, 8rem);
-  transition: transform 0.2s;
-}
-
 
 
 @keyframes fadeIn {
