@@ -115,11 +115,6 @@ export default function ActionAreaCard() {
     setIsTextVisible_Second_Choice_Challenge(true);
   };
 
-  // const handleCloseRocketLeague = () => {
-  //   setIsTextVisible(false);
-  //   // Ajoutez ici le code pour fermer la modal si nécessaire
-  // };
-
   return (
     <div className="Cards">
       <div className="CardsRow1">
