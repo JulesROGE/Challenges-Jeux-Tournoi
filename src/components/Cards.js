@@ -34,19 +34,27 @@ export default function ActionAreaCard() {
   const [openMC, setOpenMC] = React.useState(false);
 
   const handleOpenValorant = () => setOpenValorant(true);
-  const handleCloseValorant = () => setOpenValorant(false);
+  const handleCloseValorant = () => {
+    setOpenValorant(false);
+    setIsValorantGrayed(true);
+  };
   const handleOpenRocketLeague = () => setOpenRocketLeague(true);
   const handleCloseRocketLeague = () => {
     setIsTextVisibleCHargement(false);
     setOpenRocketLeague(false);
     setIsTextVisible(false);
+    setIsRocketLeagueGrayed(true);
   };
   const handleOpenFortnite = () => setOpenFortnite(true);
-  const handleCloseFortnite = () => setOpenFortnite(false);
+  const handleCloseFortnite = () => {
+    setOpenFortnite(false);
+    setIsFortniteGrayed(true);
+  };
   const handleOpenCS2 = () => setOpenCS2(true);
-  const handleCloseCS2 = () => setOpenCS2(false);
-  const handleOpenLOL = () => setOpenLOL(true);
-  const handleCloseLOL = () => setOpenLOL(false);
+  const handleCloseCS2 = () => {
+    setOpenCS2(false);
+    setIsCS2Grayed(true);
+  };
   const handleOpenMC = () => setOpenMC(true);
   const handleCloseMC = () => {
     setOpenMC(false);
@@ -56,17 +64,46 @@ export default function ActionAreaCard() {
     setIsTextVisible_Mystery_Challenge(false);
     setIsTextVisible_First_Choice_Challenge(false);
     setIsTextVisible_Second_Choice_Challenge(false);
+    setIsMCGrayed(true);
+  };
+  const handleOpenLOL = () => setOpenLOL(true);
+  const handleCloseLOL = () => {
+    setOpenLOL(false);
+    setIsLOLGrayed(true);
   };
 
   const [isTextVisible, setIsTextVisible] = useState(false);
-  const [isTextVisible_Mystery_Challenge, setIsTextVisible_Mystery_Challenge] = useState(false);
-  const [isTextVisible_First_Choice_Challenge, setIsTextVisible_First_Choice_Challenge] = useState(false);
-  const [isTextVisible_Second_Choice_Challenge, setIsTextVisible_Second_Choice_Challenge] = useState(false);
+  const [isTextVisible_Mystery_Challenge, setIsTextVisible_Mystery_Challenge] =
+    useState(false);
+  const [
+    isTextVisible_First_Choice_Challenge,
+    setIsTextVisible_First_Choice_Challenge,
+  ] = useState(false);
+  const [
+    isTextVisible_Second_Choice_Challenge,
+    setIsTextVisible_Second_Choice_Challenge,
+  ] = useState(false);
   const [isTextVisibleCHargement, setIsTextVisibleCHargement] = useState(false);
-  const [isTextVisibleCHargement_Mystery_Challenge, setIsTextVisibleCHargement_Mystery_Challenge] = useState(false);
-  const [isTextVisibleCHargement_First_Choice_Challenge, setIsTextVisibleCHargement_First_Choice_Challenge] = useState(false);
-  const [isTextVisibleCHargement_Second_Choice_Challenge, setIsTextVisibleCHargement_Second_Choice_Challenge] = useState(false);
+  const [
+    isTextVisibleCHargement_Mystery_Challenge,
+    setIsTextVisibleCHargement_Mystery_Challenge,
+  ] = useState(false);
+  const [
+    isTextVisibleCHargement_First_Choice_Challenge,
+    setIsTextVisibleCHargement_First_Choice_Challenge,
+  ] = useState(false);
+  const [
+    isTextVisibleCHargement_Second_Choice_Challenge,
+    setIsTextVisibleCHargement_Second_Choice_Challenge,
+  ] = useState(false);
   const [progress, setProgress] = React.useState(0);
+
+  const [isValorantGrayed, setIsValorantGrayed] = useState(false);
+  const [isRocketLeagueGrayed, setIsRocketLeagueGrayed] = useState(false);
+  const [isFortniteGrayed, setIsFortniteGrayed] = useState(false);
+  const [isCS2Grayed, setIsCS2Grayed] = useState(false);
+  const [isMCGrayed, setIsMCGrayed] = useState(false);
+  const [isLOLGrayed, setIsLOLGrayed] = useState(false);
 
   const handleButtonClick = () => {
     setIsTextVisibleCHargement(true);
@@ -119,7 +156,7 @@ export default function ActionAreaCard() {
     <div className="Cards">
       <div className="CardsRow1">
         <div className="Card Valorant">
-          <Card sx={{ maxWidth: 345}} className="Card">
+          <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea className="ValorantCardActionArea">
               <CardMedia
                 onClick={handleOpenValorant}
@@ -127,6 +164,9 @@ export default function ActionAreaCard() {
                 height="140"
                 image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
                 alt="green iguana"
+                style={{
+                  filter: isValorantGrayed ? "grayscale(100%)" : "none",
+                }} // Applique le filtre de grisage si isValorantGrayed est vrai
               />
             </CardActionArea>
           </Card>
@@ -150,7 +190,10 @@ export default function ActionAreaCard() {
                 component="img"
                 height="140"
                 image="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-0f2f0dbbb161b884d50f2ca09f4110bf"
-                alt="green iguana"
+                alt="Rocket League"
+                style={{
+                  filter: isRocketLeagueGrayed ? "grayscale(100%)" : "none",
+                }}
               />
             </CardActionArea>
           </Card>
@@ -165,8 +208,9 @@ export default function ActionAreaCard() {
               <h1 className="titre challenge_title">Challenge Rocket League</h1>
               <CardActionArea
                 onClick={handleButtonClick}
-                className={`RLBackgroundCard ${isTextVisible ? "Reveal_Challenge_Animation" : "hidden"}`}
-
+                className={`RLBackgroundCard ${
+                  isTextVisible ? "Reveal_Challenge_Animation" : "hidden"
+                }`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
@@ -178,7 +222,11 @@ export default function ActionAreaCard() {
                       Cliquez ici pour voir le challenge
                     </h5>
                     <h3
-                      className={isTextVisibleCHargement ? "titre Reveal_Challenge" : "hidden"}
+                      className={
+                        isTextVisibleCHargement
+                          ? "titre Reveal_Challenge"
+                          : "hidden"
+                      }
                     >
                       {isTextVisible ? (
                         "PlayAbility"
@@ -204,7 +252,10 @@ export default function ActionAreaCard() {
                 component="img"
                 height="140"
                 image="https://cdn.sortiraparis.com/images/80/66131/908390-fortnite-enfer-vert-map-skins-passe-de-combat-le-point-sur-les-nouveautes-de-la-saison-3.jpg"
-                alt="green iguana"
+                alt="Fortnite"
+                style={{
+                  filter: isFortniteGrayed ? "grayscale(100%)" : "none",
+                }}
               />
             </CardActionArea>
           </Card>
@@ -230,7 +281,8 @@ export default function ActionAreaCard() {
                 component="img"
                 height="140"
                 image="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg"
-                alt="green iguana"
+                alt="CS2"
+                style={{ filter: isCS2Grayed ? "grayscale(100%)" : "none" }}
               />
             </CardActionArea>
           </Card>
@@ -254,7 +306,8 @@ export default function ActionAreaCard() {
                 component="img"
                 height="140"
                 image="https://i0.wp.com/xxboxnews.blob.core.windows.net/prod/sites/9/2021/10/Minecraft_PC_Bundle_XboxClub_1920x1080.jpg?fit=1024%2C576&ssl=1"
-                alt="green iguana"
+                alt="Minecraft"
+                style={{ filter: isMCGrayed ? "grayscale(100%)" : "none" }}
               />
             </CardActionArea>
           </Card>
@@ -266,22 +319,46 @@ export default function ActionAreaCard() {
             className="MCModalChallenge"
           >
             <Box sx={style}>
-              <h1 className="titre challenge_title">Challenge Minecraft Bed Wars</h1>
+              <h1 className="titre challenge_title">
+                Challenge Minecraft Bed Wars
+              </h1>
               <CardActionArea
                 onClick={handleButtonClickMysteryChallenge}
-                className={`MCBackgroundCardMystery ${isTextVisibleCHargement_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style" : "hidden"} ${isTextVisible_Mystery_Challenge ? "Reveal_Mystery_Challenge_Style_Back" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Dezoom_Challenge_Down_Style" : "hidden"}`}
+                className={`MCBackgroundCardMystery ${
+                  isTextVisibleCHargement_Mystery_Challenge
+                    ? "Reveal_Mystery_Challenge_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_Mystery_Challenge
+                    ? "Reveal_Mystery_Challenge_Style_Back"
+                    : "hidden"
+                } ${
+                  isTextVisible_First_Choice_Challenge
+                    ? "Dezoom_Challenge_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_Second_Choice_Challenge
+                    ? "Dezoom_Challenge_Down_Style"
+                    : "hidden"
+                }`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5
                       className={
-                        isTextVisibleCHargement_Mystery_Challenge ? "hidden" : "Click_Me_Mystery_Challenge"
+                        isTextVisibleCHargement_Mystery_Challenge
+                          ? "hidden"
+                          : "Click_Me_Mystery_Challenge"
                       }
                     >
                       Challenge Mystere (+ 5 points)
                     </h5>
                     <h5
-                      className={isTextVisibleCHargement_Mystery_Challenge ? "titre Click_Me" : "hidden"}
+                      className={
+                        isTextVisibleCHargement_Mystery_Challenge
+                          ? "titre Click_Me"
+                          : "hidden"
+                      }
                     >
                       {isTextVisible_Mystery_Challenge ? (
                         "PlayAbility (+ 5 points)"
@@ -298,13 +375,23 @@ export default function ActionAreaCard() {
               </CardActionArea>
               <CardActionArea
                 onClick={handleButtonClickFirstChoiceChallenge}
-                className={`MCBackgroundCard ${isTextVisibleCHargement_Mystery_Challenge ? "Dezoom_Challenge_Style" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Reveal_First_Choice_Challenge_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"}`}
+                className={`MCBackgroundCard ${
+                  isTextVisibleCHargement_Mystery_Challenge
+                    ? "Dezoom_Challenge_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_First_Choice_Challenge
+                    ? "Reveal_First_Choice_Challenge_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_Second_Choice_Challenge
+                    ? "Dezoom_Challenge_Style"
+                    : "hidden"
+                }`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    <h5
-                      className="Click_Me"
-                    >
+                    <h5 className="Click_Me">
                       Lunettes de simulation (+ 3 points)
                     </h5>
                   </Typography>
@@ -312,15 +399,23 @@ export default function ActionAreaCard() {
               </CardActionArea>
               <CardActionArea
                 onClick={handleButtonClickSecondChoiceChallenge}
-                className={`MCBackgroundCard ${isTextVisibleCHargement_Mystery_Challenge ? "Dezoom_Challenge_Up_Style" : "hidden"} ${isTextVisible_Second_Choice_Challenge ? "Reveal_Second_Choice_Challenge_Style" : "hidden"} ${isTextVisible_First_Choice_Challenge ? "Dezoom_Challenge_Style" : "hidden"}`}
+                className={`MCBackgroundCard ${
+                  isTextVisibleCHargement_Mystery_Challenge
+                    ? "Dezoom_Challenge_Up_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_Second_Choice_Challenge
+                    ? "Reveal_Second_Choice_Challenge_Style"
+                    : "hidden"
+                } ${
+                  isTextVisible_First_Choice_Challenge
+                    ? "Dezoom_Challenge_Style"
+                    : "hidden"
+                }`}
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    <h5
-                      className="Click_Me"
-                    >
-                      Absence de son (+ 2 points)
-                    </h5>
+                    <h5 className="Click_Me">Absence de son (+ 2 points)</h5>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -335,7 +430,8 @@ export default function ActionAreaCard() {
                 component="img"
                 height="140"
                 image="https://www.global-esports.news/wp-content/uploads/2022/01/League-of-Legends-2022.jpg"
-                alt="green iguana"
+                alt="LOL"
+                style={{ filter: isLOLGrayed ? "grayscale(100%)" : "none" }}
               />
             </CardActionArea>
           </Card>
