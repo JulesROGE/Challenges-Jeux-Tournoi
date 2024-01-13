@@ -392,7 +392,7 @@ export default function ActionAreaCard() {
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5 className="Click_Me">
-                      Lunettes de simulation (+ 3 points)
+                      Deficience visuelle (+ 3 points)
                     </h5>
                   </Typography>
                 </CardContent>
@@ -415,7 +415,7 @@ export default function ActionAreaCard() {
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    <h5 className="Click_Me">Absence de son (+ 2 points)</h5>
+                    <h5 className="Click_Me">Audition reduite (+ 2 points)</h5>
                   </Typography>
                 </CardContent>
               </CardActionArea>

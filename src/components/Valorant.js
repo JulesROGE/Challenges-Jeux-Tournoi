@@ -7,12 +7,12 @@ export default function Roue() {
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const data = [
-    { option: "Doigts liés entre eux", style: { fontSize: 15 } },
-    { option: "Lunettes de simulation", style: { fontSize: 15 } },
-    { option: "Défi de concentration", style: { fontSize: 15 } },
-    { option: "Réticule visée désactivée", style: { fontSize: 14 } },
-    { option: "Champ de vision réduit", style: { fontSize: 15 } },
-    { option: "Sensibilité au minimum", style: { fontSize: 15 } },
+    { option: "Préhension Réduite", style: { fontSize: 15 } },
+    { option: "Déficience visuelle", style: { fontSize: 15 } },
+    { option: "Audition reduite", style: { fontSize: 15 } },
+    { option: "Préhension Réduite", style: { fontSize: 15 } },
+    { option: "Déficience visuelle", style: { fontSize: 15 } },
+    { option: "Préhension Réduite", style: { fontSize: 15 } },
   ];
 
   const bgs = ["#F5C75D", "#2B619D"];
