@@ -10,12 +10,7 @@
 }
 
 html {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(90deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
 }
 
 .App {
@@ -26,4 +21,35 @@ html {
 
 h1, h3, h5 {
   font-family: 'f Finish', sans-serif !important;
-}  
+}
+
+.mainTitre {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+
+.Title_Div {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+.Logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+}
+
+
+
+@media(-webkit-device-pixel-ratio: 1.5){
+  .mainTitre {
+    font-size: 2rem;
+  }
+  .Logo {
+    width: 75px;
+    height: 75px;
+    margin-top: 0.1rem;
+  }
+}
