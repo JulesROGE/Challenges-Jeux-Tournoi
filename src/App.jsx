@@ -1,6 +1,6 @@
 import Cards from "./assets/components/Cards.jsx";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
