@@ -25,7 +25,7 @@ const style = {
   p: 4,
 };
 
-export default function ActionAreaCard() {
+export default function Cards() {
   const [openValorant, setOpenValorant] = React.useState(false);
   const [openRocketLeague, setOpenRocketLeague] = React.useState(false);
   const [openFortnite, setOpenFortnite] = React.useState(false);
@@ -162,7 +162,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenValorant}
                 component="img"
                 height="140"
-                image="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-b88adde6a57e40aa85818820aa87a6cd"
+                image="/VALORANT.jfif"
                 alt="green iguana"
                 style={{
                   filter: isValorantGrayed ? "grayscale(100%)" : "none",
@@ -189,7 +189,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenRocketLeague}
                 component="img"
                 height="140"
-                image="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-0f2f0dbbb161b884d50f2ca09f4110bf"
+                image="/RocketLeague.jfif"
                 alt="Rocket League"
                 style={{
                   filter: isRocketLeagueGrayed ? "grayscale(100%)" : "none",
@@ -251,7 +251,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenFortnite}
                 component="img"
                 height="140"
-                image="https://cdn.sortiraparis.com/images/80/66131/908390-fortnite-enfer-vert-map-skins-passe-de-combat-le-point-sur-les-nouveautes-de-la-saison-3.jpg"
+                image="/Fortnite.jpg"
                 alt="Fortnite"
                 style={{
                   filter: isFortniteGrayed ? "grayscale(100%)" : "none",
@@ -280,7 +280,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenCS2}
                 component="img"
                 height="140"
-                image="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg"
+                image="/CS2.jpg"
                 alt="CS2"
                 style={{ filter: isCS2Grayed ? "grayscale(100%)" : "none" }}
               />
@@ -305,7 +305,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenMC}
                 component="img"
                 height="140"
-                image="https://i0.wp.com/xxboxnews.blob.core.windows.net/prod/sites/9/2021/10/Minecraft_PC_Bundle_XboxClub_1920x1080.jpg?fit=1024%2C576&ssl=1"
+                image="/Minecraft.webp"
                 alt="Minecraft"
                 style={{ filter: isMCGrayed ? "grayscale(100%)" : "none" }}
               />
@@ -429,7 +429,7 @@ export default function ActionAreaCard() {
                 onClick={handleOpenLOL}
                 component="img"
                 height="140"
-                image="https://www.global-esports.news/wp-content/uploads/2022/01/League-of-Legends-2022.jpg"
+                image="/LOL.jpg"
                 alt="LOL"
                 style={{ filter: isLOLGrayed ? "grayscale(100%)" : "none" }}
               />
