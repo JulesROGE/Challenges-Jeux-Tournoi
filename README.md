@@ -1,6 +1,6 @@
 // README.md
 
-# Projet ReactJS - Tournoi de jeux V2.8
+# Projet ReactJS - Tournoi de jeux V3.0
 
 Ce projet est une application web développée en utilisant ReactJS. Il s'agit d'une page web affichant une liste de cartes représentant les challenges pour les 6 jeux du tournoi.
 

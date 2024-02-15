@@ -24,6 +24,7 @@ function App() {
         />
       </div>
       <Cards />
+      <span>#HandEsport</span>
     </>
   );
 }

@@ -19,7 +19,7 @@ html {
   font-family: 'f Finish', sans-serif !important;
 }
 
-h1, h3, h5 {
+h1, h3, h5, span {
   font-family: 'f Finish', sans-serif !important;
 }
 
@@ -27,6 +27,7 @@ h1, h3, h5 {
   font-size: 4rem;
   color: white;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .Title_Div {
@@ -41,15 +42,27 @@ h1, h3, h5 {
   margin-top: 1rem;
 }
 
+span {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
 
 
 @media(-webkit-device-pixel-ratio: 1.5){
   .mainTitre {
     font-size: 2rem;
+    margin-bottom: 0.3rem;
   }
   .Logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     margin-top: 0.1rem;
+  }
+  span {
+    font-size: 0.8rem;
+    margin-top: 0;
   }
 }
