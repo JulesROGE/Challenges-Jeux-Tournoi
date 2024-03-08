@@ -10,11 +10,9 @@ export default function Roue() {
     { option: "Préhension Réduite", style: { fontSize: 15} },
     { option: "Déficience visuelle", style: { fontSize: 15} },
     { option: "Audition reduite", style: { fontSize: 15} },
-    { option: "PlayAbility ", style: { fontSize: 15} },
     { option: "Préhension Réduite", style: { fontSize: 15} },
     { option: "Déficience visuelle", style: { fontSize: 15} },
     { option: "Audition reduite", style: { fontSize: 15} },
-    { option: "PlayAbility ", style: { fontSize: 15} },
   ];
   
   
