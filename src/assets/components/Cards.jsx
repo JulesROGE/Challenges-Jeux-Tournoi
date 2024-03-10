@@ -244,7 +244,7 @@ export default function Cards() {
             </Box>
           </Modal>
         </div>
-        <div className="Card Fortnite">
+        {/* <div className="Card Fortnite">
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea className="FortniteCardActionArea">
               <CardMedia
@@ -270,10 +270,10 @@ export default function Cards() {
               <Fortnite />
             </Box>
           </Modal>
-        </div>
+        </div> */}
       </div>
       <div className="CardsRow2">
-        <div className="Card CS2">
+        {/* <div className="Card CS2">
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea className="CS2CardActionArea">
               <CardMedia
@@ -297,7 +297,7 @@ export default function Cards() {
               <CS2 />
             </Box>
           </Modal>
-        </div>
+        </div> */}
         <div className="Card Minecraft">
           <Card sx={{ maxWidth: 345 }} className="Card">
             <CardActionArea className="MinecraftCardActionArea">
@@ -351,7 +351,7 @@ export default function Cards() {
                           : "Click_Me_Mystery_Challenge"
                       }
                     >
-                      Challenge Mystere (+ 5 points)
+                      Challenge Mystere (+ 1 points)
                     </h5>
                     <h5
                       className={
@@ -361,7 +361,7 @@ export default function Cards() {
                       }
                     >
                       {isTextVisible_Mystery_Challenge ? (
-                        "PlayAbility (+ 5 points)"
+                        "PlayAbility (+ 1 points)"
                       ) : (
                         <CircularProgress
                           variant="determinate"
@@ -392,7 +392,7 @@ export default function Cards() {
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <h5 className="Click_Me">
-                      Deficience visuelle (+ 3 points)
+                      Deficience visuelle (+ 0.5 points)
                     </h5>
                   </Typography>
                 </CardContent>
@@ -415,7 +415,7 @@ export default function Cards() {
               >
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    <h5 className="Click_Me">Audition reduite (+ 2 points)</h5>
+                    <h5 className="Click_Me">Audition reduite (+ 0 point)</h5>
                   </Typography>
                 </CardContent>
               </CardActionArea>
